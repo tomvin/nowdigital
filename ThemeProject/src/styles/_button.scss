@@ -1,22 +1,49 @@
 /*
 ---
-name: Button
+name: Buttons
 category: Components
 ---
 
-Buttons can be used with `<a>`, `<button>`, and `<input>` elements.
+Use custom button styles for actions in forms, dialogs, and more with support for multiple colours and states.
 
-Types of buttons:
-- Default: Standard button
+Along with the default style, buttons come in 3 colors with a variation of that color:
+- Default
+- Lime, Lime Dark
+- Peach, Peach Dark
+- Slate, Slate Lite
 
+### Button Examples
 ```buttons.html
 <button class="button">Default</button>
 <button class="button button--lime">Lime</button>
+<button class="button button--lime-dark">Lime Dark</button>
 <button class="button button--peach">Peach</button>
+<button class="button button--peach-dark">Peach Dark</button>
 <button class="button button--slate">Slate</button>
+<button class="button button--slate-lite">Slate Lite</button>
+```
+### Disabled Buttons
+```buttons-disabled.html
+<button disabled class="button">Default</button>
+<button disabled class="button button--lime">Lime</button>
+<button disabled class="button button--lime-dark">Lime Dark</button>
+<button disabled class="button button--peach">Peach</button>
+<button disabled class="button button--peach-dark">Peach Dark</button>
+<button disabled class="button button--slate">Slate</button>
+<button disabled class="button button--slate-lite">Slate Lite</button>
 ```
 
 ```buttons.css hidden
+body {
+  margin: 32px;
+}
+
+.button {
+  margin-right: 24px;
+}
+```
+
+```buttons-disabled.css hidden
 body {
   margin: 32px;
 }
@@ -33,20 +60,23 @@ body {
   display: inline-block;
   font-weight: normal;
   transition: .3s ease all;
-  background-origin: padding-box;
   text-decoration: none;
   border: none;
   text-align: center;
   vertical-align: middle;
-  background-color: #fff;
-  cursor: pointer;
+  background-color: #fff;  
   
   &:not(:disabled) {
     box-shadow: 2px 2px 2px #dcdcdc;
+    cursor: pointer;
 
     &:hover {
       box-shadow: 4px 4px 4px #dcdcdc;
     }
+  }
+
+  &:disabled, &--disabled {
+    cursor: not-allowed;
   }
 
   &:visited {
@@ -58,12 +88,24 @@ body {
     background-color: $peach-primary;
   }
 
+  &--peach-dark {
+    background-color: $peach-dark;
+  }
+
   &--lime {
     background-color: $lime-primary;
+  }
+
+  &--lime-dark {
+    background-color: $lime-dark;
   }
 
   &--slate {
     background-color: $slate-primary;
     color: #fff;
+  }
+
+  &--slate-lite {
+    background-color: $slate-lite;
   }
 }

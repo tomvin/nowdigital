@@ -1,4 +1,4 @@
-To bundle the theme and it's sass files"
+Bundle the theme and it's sass files"
 1. Inside the ThemeProject folder run:
 npm run bundle
 

@@ -21,24 +21,30 @@
 					<select class="form-control form-control-lg">
 						<option disabled selected>Go to…</option>
 							<optgroup label="Components">
-									<option value="button">Button</option>
+									<option value="buttons">Buttons</option>
+									<option value="cards">Cards</option>
+									<option value="radio-buttons">Radio Buttons</option>
+									<option value="text-inputs">Text Inputs</option>
 							</optgroup>
 					</select>
 				</form>
 			</div>
 
 				<div id="category-components">
-						<div id="button" class="i-library">
-	<h1 class="display-4">Button</h1>
-	<div><p>Buttons can be used with <code>&lt;a&gt;</code>, <code>&lt;button&gt;</code>, and <code>&lt;input&gt;</code> elements.</p>
-<p>Types of buttons:</p>
+						<div id="buttons" class="i-library">
+	<h1 class="display-4">Buttons</h1>
+	<div><p>Use custom button styles for actions in forms, dialogs, and more with support for multiple colours and states.</p>
+<p>Along with the default style, buttons come in 3 colors with a variation of that color:</p>
 <ul>
-<li>Default: Standard button</li>
+<li>Default</li>
+<li>Lime, Lime Dark</li>
+<li>Peach, Peach Dark</li>
+<li>Slate, Slate Lite</li>
 </ul>
-<div class="i-example">
+<h3>Button Examples</h3><div class="i-example">
                     <h5 class="i-example__heading">
                         <a
-                            href="button-buttons.html"
+                            href="buttons-buttons.html"
                             target="_blank"
                             class="fa fa-external-link-square fa-fw plain-link"
                             title="Open in a new window"
@@ -49,7 +55,7 @@
                         <div
                             class="i-example__iframe"
                             lazyframe
-                            data-src="button-buttons.html"
+                            data-src="buttons-buttons.html"
                             data-initinview="true"
                             data-title="Loading…"
 
@@ -63,12 +69,340 @@
 	<div class="i-code-block__content hidden">
 		<button type="button" class="btn btn-outline-primary btn-sm i-copy-button" data-clipboard-text="&lt;button class=&quot;button&quot;&gt;Default&lt;/button&gt;
 &lt;button class=&quot;button button--lime&quot;&gt;Lime&lt;/button&gt;
+&lt;button class=&quot;button button--lime-dark&quot;&gt;Lime Dark&lt;/button&gt;
 &lt;button class=&quot;button button--peach&quot;&gt;Peach&lt;/button&gt;
-&lt;button class=&quot;button button--slate&quot;&gt;Slate&lt;/button&gt;" data-toggle="tooltip" data-placement="top" title="Tooltip on top">Copy</button>
+&lt;button class=&quot;button button--peach-dark&quot;&gt;Peach Dark&lt;/button&gt;
+&lt;button class=&quot;button button--slate&quot;&gt;Slate&lt;/button&gt;
+&lt;button class=&quot;button button--slate-lite&quot;&gt;Slate Lite&lt;/button&gt;" data-toggle="tooltip" data-placement="top" title="Tooltip on top">Copy</button>
 		<pre class="mb-0"><code class="lang-">&lt;button class=&quot;button&quot;&gt;Default&lt;/button&gt;
 &lt;button class=&quot;button button--lime&quot;&gt;Lime&lt;/button&gt;
+&lt;button class=&quot;button button--lime-dark&quot;&gt;Lime Dark&lt;/button&gt;
 &lt;button class=&quot;button button--peach&quot;&gt;Peach&lt;/button&gt;
-&lt;button class=&quot;button button--slate&quot;&gt;Slate&lt;/button&gt;</code></pre>
+&lt;button class=&quot;button button--peach-dark&quot;&gt;Peach Dark&lt;/button&gt;
+&lt;button class=&quot;button button--slate&quot;&gt;Slate&lt;/button&gt;
+&lt;button class=&quot;button button--slate-lite&quot;&gt;Slate Lite&lt;/button&gt;</code></pre>
+	</div>
+</div><h3>Disabled Buttons</h3><div class="i-example">
+                    <h5 class="i-example__heading">
+                        <a
+                            href="buttons-buttons-disabled.html"
+                            target="_blank"
+                            class="fa fa-external-link-square fa-fw plain-link"
+                            title="Open in a new window"
+                        ></a>
+                        Example
+                    </h5>
+                    <div class="i-example__body">
+                        <div
+                            class="i-example__iframe"
+                            lazyframe
+                            data-src="buttons-buttons-disabled.html"
+                            data-initinview="true"
+                            data-title="Loading…"
+
+                        ></div>
+                    </div>
+                </div>
+
+
+<div class="i-code-block">
+	<button type="button" class="i-code-block__lang -collapsible"><i class="fa fa-caret-right fa-fw"></i> html</button>
+	<div class="i-code-block__content hidden">
+		<button type="button" class="btn btn-outline-primary btn-sm i-copy-button" data-clipboard-text="&lt;button disabled class=&quot;button&quot;&gt;Default&lt;/button&gt;
+&lt;button disabled class=&quot;button button--lime&quot;&gt;Lime&lt;/button&gt;
+&lt;button disabled class=&quot;button button--lime-dark&quot;&gt;Lime Dark&lt;/button&gt;
+&lt;button disabled class=&quot;button button--peach&quot;&gt;Peach&lt;/button&gt;
+&lt;button disabled class=&quot;button button--peach-dark&quot;&gt;Peach Dark&lt;/button&gt;
+&lt;button disabled class=&quot;button button--slate&quot;&gt;Slate&lt;/button&gt;
+&lt;button disabled class=&quot;button button--slate-lite&quot;&gt;Slate Lite&lt;/button&gt;" data-toggle="tooltip" data-placement="top" title="Tooltip on top">Copy</button>
+		<pre class="mb-0"><code class="lang-">&lt;button disabled class=&quot;button&quot;&gt;Default&lt;/button&gt;
+&lt;button disabled class=&quot;button button--lime&quot;&gt;Lime&lt;/button&gt;
+&lt;button disabled class=&quot;button button--lime-dark&quot;&gt;Lime Dark&lt;/button&gt;
+&lt;button disabled class=&quot;button button--peach&quot;&gt;Peach&lt;/button&gt;
+&lt;button disabled class=&quot;button button--peach-dark&quot;&gt;Peach Dark&lt;/button&gt;
+&lt;button disabled class=&quot;button button--slate&quot;&gt;Slate&lt;/button&gt;
+&lt;button disabled class=&quot;button button--slate-lite&quot;&gt;Slate Lite&lt;/button&gt;</code></pre>
+	</div>
+</div></div>
+</div>
+
+						<div id="cards" class="i-library">
+	<h1 class="display-4">Cards</h1>
+	<div><p>The card provides a flexible and extensible content container.</p>
+<h3>Card Example</h3><div class="i-example">
+                    <h5 class="i-example__heading">
+                        <a
+                            href="cards-card.html"
+                            target="_blank"
+                            class="fa fa-external-link-square fa-fw plain-link"
+                            title="Open in a new window"
+                        ></a>
+                        Example
+                    </h5>
+                    <div class="i-example__body">
+                        <div
+                            class="i-example__iframe"
+                            lazyframe
+                            data-src="cards-card.html"
+                            data-initinview="true"
+                            data-title="Loading…"
+
+                        ></div>
+                    </div>
+                </div>
+
+
+<div class="i-code-block">
+	<button type="button" class="i-code-block__lang -collapsible"><i class="fa fa-caret-right fa-fw"></i> html</button>
+	<div class="i-code-block__content hidden">
+		<button type="button" class="btn btn-outline-primary btn-sm i-copy-button" data-clipboard-text="&lt;div class=&quot;card&quot;&gt;
+    &lt;span class=&quot;card__title&quot;&gt;Card Title&lt;/span&gt;
+    &lt;p class=&quot;card__content&quot;&gt;
+        Some quick example text to build on the card title and make up the bulk of the card&#39;s content.
+    &lt;/p&gt;
+    &lt;button class=&quot;button button--lime card__action&quot;&gt;Action&lt;/button&gt;
+&lt;/div&gt;" data-toggle="tooltip" data-placement="top" title="Tooltip on top">Copy</button>
+		<pre class="mb-0"><code class="lang-">&lt;div class=&quot;card&quot;&gt;
+    &lt;span class=&quot;card__title&quot;&gt;Card Title&lt;/span&gt;
+    &lt;p class=&quot;card__content&quot;&gt;
+        Some quick example text to build on the card title and make up the bulk of the card&#39;s content.
+    &lt;/p&gt;
+    &lt;button class=&quot;button button--lime card__action&quot;&gt;Action&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+	</div>
+</div></div>
+</div>
+
+						<div id="radio-buttons" class="i-library">
+	<h1 class="display-4">Radio Buttons</h1>
+	<div><p>Examples and usage guidelines for radio buttons. </p>
+<p>Along with the default style, radio buttons come in 3 colors with a variation of that color:</p>
+<ul>
+<li>Default</li>
+<li>Lime, Lime Dark</li>
+<li>Peach, Peach Dark</li>
+<li>Slate, Slate Lite</li>
+</ul>
+<h3>Radio Button Examples</h3><div class="i-example">
+                    <h5 class="i-example__heading">
+                        <a
+                            href="radio-buttons-radio.html"
+                            target="_blank"
+                            class="fa fa-external-link-square fa-fw plain-link"
+                            title="Open in a new window"
+                        ></a>
+                        Example
+                    </h5>
+                    <div class="i-example__body">
+                        <div
+                            class="i-example__iframe"
+                            lazyframe
+                            data-src="radio-buttons-radio.html"
+                            data-initinview="true"
+                            data-title="Loading…"
+
+                        ></div>
+                    </div>
+                </div>
+
+
+<div class="i-code-block">
+	<button type="button" class="i-code-block__lang -collapsible"><i class="fa fa-caret-right fa-fw"></i> html</button>
+	<div class="i-code-block__content hidden">
+		<button type="button" class="btn btn-outline-primary btn-sm i-copy-button" data-clipboard-text="&lt;label class=&quot;radio-control&quot;&gt;Default
+  &lt;input type=&quot;radio&quot; name=&quot;radio&quot;&gt;
+  &lt;span class=&quot;checkmark&quot;&gt;&lt;/span&gt;
+&lt;/label&gt;
+&lt;label class=&quot;radio-control radio-control--lime&quot;&gt;Lime
+  &lt;input type=&quot;radio&quot; name=&quot;radio&quot;&gt;
+  &lt;span class=&quot;checkmark&quot;&gt;&lt;/span&gt;
+&lt;/label&gt;
+&lt;label class=&quot;radio-control radio-control--lime-dark&quot;&gt;Lime Dark
+  &lt;input type=&quot;radio&quot; name=&quot;radio&quot;&gt;
+  &lt;span class=&quot;checkmark&quot;&gt;&lt;/span&gt;
+&lt;/label&gt;
+&lt;label class=&quot;radio-control radio-control--peach&quot;&gt;Peach
+  &lt;input type=&quot;radio&quot; checked=&quot;checked&quot; name=&quot;radio&quot;&gt;
+  &lt;span class=&quot;checkmark&quot;&gt;&lt;/span&gt;
+&lt;/label&gt;
+&lt;label class=&quot;radio-control radio-control--peach-dark&quot;&gt;Peach Dark
+  &lt;input type=&quot;radio&quot; name=&quot;radio&quot;&gt;
+  &lt;span class=&quot;checkmark&quot;&gt;&lt;/span&gt;
+&lt;/label&gt;
+&lt;label class=&quot;radio-control radio-control--slate&quot;&gt;Slate
+  &lt;input type=&quot;radio&quot; name=&quot;radio&quot;&gt;
+  &lt;span class=&quot;checkmark&quot;&gt;&lt;/span&gt;
+&lt;/label&gt;
+&lt;label class=&quot;radio-control radio-control--slate-lite&quot;&gt;Slate Lite
+  &lt;input type=&quot;radio&quot; name=&quot;radio&quot;&gt;
+  &lt;span class=&quot;checkmark&quot;&gt;&lt;/span&gt;
+&lt;/label&gt;" data-toggle="tooltip" data-placement="top" title="Tooltip on top">Copy</button>
+		<pre class="mb-0"><code class="lang-">&lt;label class=&quot;radio-control&quot;&gt;Default
+  &lt;input type=&quot;radio&quot; name=&quot;radio&quot;&gt;
+  &lt;span class=&quot;checkmark&quot;&gt;&lt;/span&gt;
+&lt;/label&gt;
+&lt;label class=&quot;radio-control radio-control--lime&quot;&gt;Lime
+  &lt;input type=&quot;radio&quot; name=&quot;radio&quot;&gt;
+  &lt;span class=&quot;checkmark&quot;&gt;&lt;/span&gt;
+&lt;/label&gt;
+&lt;label class=&quot;radio-control radio-control--lime-dark&quot;&gt;Lime Dark
+  &lt;input type=&quot;radio&quot; name=&quot;radio&quot;&gt;
+  &lt;span class=&quot;checkmark&quot;&gt;&lt;/span&gt;
+&lt;/label&gt;
+&lt;label class=&quot;radio-control radio-control--peach&quot;&gt;Peach
+  &lt;input type=&quot;radio&quot; checked=&quot;checked&quot; name=&quot;radio&quot;&gt;
+  &lt;span class=&quot;checkmark&quot;&gt;&lt;/span&gt;
+&lt;/label&gt;
+&lt;label class=&quot;radio-control radio-control--peach-dark&quot;&gt;Peach Dark
+  &lt;input type=&quot;radio&quot; name=&quot;radio&quot;&gt;
+  &lt;span class=&quot;checkmark&quot;&gt;&lt;/span&gt;
+&lt;/label&gt;
+&lt;label class=&quot;radio-control radio-control--slate&quot;&gt;Slate
+  &lt;input type=&quot;radio&quot; name=&quot;radio&quot;&gt;
+  &lt;span class=&quot;checkmark&quot;&gt;&lt;/span&gt;
+&lt;/label&gt;
+&lt;label class=&quot;radio-control radio-control--slate-lite&quot;&gt;Slate Lite
+  &lt;input type=&quot;radio&quot; name=&quot;radio&quot;&gt;
+  &lt;span class=&quot;checkmark&quot;&gt;&lt;/span&gt;
+&lt;/label&gt;</code></pre>
+	</div>
+</div><h3>Disabled Radio Buttons</h3><div class="i-example">
+                    <h5 class="i-example__heading">
+                        <a
+                            href="radio-buttons-radios-disabled.html"
+                            target="_blank"
+                            class="fa fa-external-link-square fa-fw plain-link"
+                            title="Open in a new window"
+                        ></a>
+                        Example
+                    </h5>
+                    <div class="i-example__body">
+                        <div
+                            class="i-example__iframe"
+                            lazyframe
+                            data-src="radio-buttons-radios-disabled.html"
+                            data-initinview="true"
+                            data-title="Loading…"
+
+                        ></div>
+                    </div>
+                </div>
+
+
+<div class="i-code-block">
+	<button type="button" class="i-code-block__lang -collapsible"><i class="fa fa-caret-right fa-fw"></i> html</button>
+	<div class="i-code-block__content hidden">
+		<button type="button" class="btn btn-outline-primary btn-sm i-copy-button" data-clipboard-text="&lt;label class=&quot;radio-control&quot;&gt;Default
+  &lt;input disabled type=&quot;radio&quot; checked=&quot;checked&quot; name=&quot;radio&quot;&gt;
+  &lt;span class=&quot;checkmark&quot;&gt;&lt;/span&gt;
+&lt;/label&gt;
+&lt;label class=&quot;radio-control radio-control--lime&quot;&gt;Lime
+  &lt;input disabled type=&quot;radio&quot; name=&quot;radio&quot;&gt;
+  &lt;span class=&quot;checkmark&quot;&gt;&lt;/span&gt;
+&lt;/label&gt;" data-toggle="tooltip" data-placement="top" title="Tooltip on top">Copy</button>
+		<pre class="mb-0"><code class="lang-">&lt;label class=&quot;radio-control&quot;&gt;Default
+  &lt;input disabled type=&quot;radio&quot; checked=&quot;checked&quot; name=&quot;radio&quot;&gt;
+  &lt;span class=&quot;checkmark&quot;&gt;&lt;/span&gt;
+&lt;/label&gt;
+&lt;label class=&quot;radio-control radio-control--lime&quot;&gt;Lime
+  &lt;input disabled type=&quot;radio&quot; name=&quot;radio&quot;&gt;
+  &lt;span class=&quot;checkmark&quot;&gt;&lt;/span&gt;
+&lt;/label&gt;</code></pre>
+	</div>
+</div></div>
+</div>
+
+						<div id="text-inputs" class="i-library">
+	<h1 class="display-4">Text Inputs</h1>
+	<div><p>Examples and usage guidelines for basic text inputs. </p>
+<p>Along with the default style, inputs come in 3 colors with a variation of that color:</p>
+<ul>
+<li>Default</li>
+<li>Lime, Lime Dark</li>
+<li>Peach, Peach Dark</li>
+<li>Slate, Slate Lite</li>
+</ul>
+<h3>Text Input Examples</h3><div class="i-example">
+                    <h5 class="i-example__heading">
+                        <a
+                            href="text-inputs-inputs.html"
+                            target="_blank"
+                            class="fa fa-external-link-square fa-fw plain-link"
+                            title="Open in a new window"
+                        ></a>
+                        Example
+                    </h5>
+                    <div class="i-example__body">
+                        <div
+                            class="i-example__iframe"
+                            lazyframe
+                            data-src="text-inputs-inputs.html"
+                            data-initinview="true"
+                            data-title="Loading…"
+
+                        ></div>
+                    </div>
+                </div>
+
+
+<div class="i-code-block">
+	<button type="button" class="i-code-block__lang -collapsible"><i class="fa fa-caret-right fa-fw"></i> html</button>
+	<div class="i-code-block__content hidden">
+		<button type="button" class="btn btn-outline-primary btn-sm i-copy-button" data-clipboard-text="&lt;input class=&quot;input&quot; placeholder=&quot;Default&quot; /&gt;
+&lt;input class=&quot;input input--lime&quot; placeholder=&quot;Lime&quot; /&gt;
+&lt;input class=&quot;input input--lime-dark&quot; placeholder=&quot;Lime Dark&quot; /&gt;
+&lt;input class=&quot;input input--peach&quot; placeholder=&quot;Peach&quot; /&gt;
+&lt;input class=&quot;input input--peach-dark&quot; placeholder=&quot;Peach Dark&quot; /&gt;
+&lt;input class=&quot;input input--slate&quot; placeholder=&quot;Slate&quot; /&gt;
+&lt;input class=&quot;input input--slate-lite&quot; placeholder=&quot;Slate Lite&quot; /&gt;" data-toggle="tooltip" data-placement="top" title="Tooltip on top">Copy</button>
+		<pre class="mb-0"><code class="lang-">&lt;input class=&quot;input&quot; placeholder=&quot;Default&quot; /&gt;
+&lt;input class=&quot;input input--lime&quot; placeholder=&quot;Lime&quot; /&gt;
+&lt;input class=&quot;input input--lime-dark&quot; placeholder=&quot;Lime Dark&quot; /&gt;
+&lt;input class=&quot;input input--peach&quot; placeholder=&quot;Peach&quot; /&gt;
+&lt;input class=&quot;input input--peach-dark&quot; placeholder=&quot;Peach Dark&quot; /&gt;
+&lt;input class=&quot;input input--slate&quot; placeholder=&quot;Slate&quot; /&gt;
+&lt;input class=&quot;input input--slate-lite&quot; placeholder=&quot;Slate Lite&quot; /&gt;</code></pre>
+	</div>
+</div><h3>Disabled Text Inputs</h3><div class="i-example">
+                    <h5 class="i-example__heading">
+                        <a
+                            href="text-inputs-inputs-disabled.html"
+                            target="_blank"
+                            class="fa fa-external-link-square fa-fw plain-link"
+                            title="Open in a new window"
+                        ></a>
+                        Example
+                    </h5>
+                    <div class="i-example__body">
+                        <div
+                            class="i-example__iframe"
+                            lazyframe
+                            data-src="text-inputs-inputs-disabled.html"
+                            data-initinview="true"
+                            data-title="Loading…"
+
+                        ></div>
+                    </div>
+                </div>
+
+
+<div class="i-code-block">
+	<button type="button" class="i-code-block__lang -collapsible"><i class="fa fa-caret-right fa-fw"></i> html</button>
+	<div class="i-code-block__content hidden">
+		<button type="button" class="btn btn-outline-primary btn-sm i-copy-button" data-clipboard-text="&lt;input disabled class=&quot;input&quot; placeholder=&quot;Default&quot; /&gt;
+&lt;input disabled class=&quot;input input--lime&quot; placeholder=&quot;Lime&quot; /&gt;
+&lt;input disabled class=&quot;input input--lime-dark&quot; placeholder=&quot;Lime Dark&quot; /&gt;
+&lt;input disabled class=&quot;input input--peach&quot; placeholder=&quot;Peach&quot; /&gt;
+&lt;input disabled class=&quot;input input--peach-dark&quot; placeholder=&quot;Peach Dark&quot; /&gt;
+&lt;input disabled class=&quot;input input--slate&quot; placeholder=&quot;Slate&quot; /&gt;
+&lt;input disabled class=&quot;input input--slate-lite&quot; placeholder=&quot;Slate Lite&quot; /&gt;" data-toggle="tooltip" data-placement="top" title="Tooltip on top">Copy</button>
+		<pre class="mb-0"><code class="lang-">&lt;input disabled class=&quot;input&quot; placeholder=&quot;Default&quot; /&gt;
+&lt;input disabled class=&quot;input input--lime&quot; placeholder=&quot;Lime&quot; /&gt;
+&lt;input disabled class=&quot;input input--lime-dark&quot; placeholder=&quot;Lime Dark&quot; /&gt;
+&lt;input disabled class=&quot;input input--peach&quot; placeholder=&quot;Peach&quot; /&gt;
+&lt;input disabled class=&quot;input input--peach-dark&quot; placeholder=&quot;Peach Dark&quot; /&gt;
+&lt;input disabled class=&quot;input input--slate&quot; placeholder=&quot;Slate&quot; /&gt;
+&lt;input disabled class=&quot;input input--slate-lite&quot; placeholder=&quot;Slate Lite&quot; /&gt;</code></pre>
 	</div>
 </div></div>
 </div>
@@ -101,7 +435,7 @@
 			
 					<h5
 						class="pt-4 mb-1"
-						data-filter-value=" Button "
+						data-filter-value=" Buttons  Cards  Radio Buttons  Text Inputs "
 					>
 						<a href="#category-components" class="i-sidebar-list-item">
 							<b>Components</b>
@@ -110,11 +444,32 @@
 			
 					<div>
 							<a
-								href="#button"
+								href="#buttons"
 								class="i-sidebar-list-item"
-								data-filter-value="Button"
+								data-filter-value="Buttons"
 							>
-								<span>Button</span>
+								<span>Buttons</span>
+							</a>
+							<a
+								href="#cards"
+								class="i-sidebar-list-item"
+								data-filter-value="Cards"
+							>
+								<span>Cards</span>
+							</a>
+							<a
+								href="#radio-buttons"
+								class="i-sidebar-list-item"
+								data-filter-value="Radio Buttons"
+							>
+								<span>Radio Buttons</span>
+							</a>
+							<a
+								href="#text-inputs"
+								class="i-sidebar-list-item"
+								data-filter-value="Text Inputs"
+							>
+								<span>Text Inputs</span>
 							</a>
 					</div>
 			

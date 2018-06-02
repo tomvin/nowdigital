@@ -1,0 +1,163 @@
+/*
+---
+name: Radio Buttons
+category: Components
+---
+
+Examples and usage guidelines for radio buttons. 
+
+Along with the default style, radio buttons come in 3 colors with a variation of that color:
+- Default
+- Lime, Lime Dark
+- Peach, Peach Dark
+- Slate, Slate Lite
+
+### Radio Button Examples
+```radio.html
+<label class="radio-control">Default
+  <input type="radio" name="radio">
+  <span class="checkmark"></span>
+</label>
+<label class="radio-control radio-control--lime">Lime
+  <input type="radio" name="radio">
+  <span class="checkmark"></span>
+</label>
+<label class="radio-control radio-control--lime-dark">Lime Dark
+  <input type="radio" name="radio">
+  <span class="checkmark"></span>
+</label>
+<label class="radio-control radio-control--peach">Peach
+  <input type="radio" checked="checked" name="radio">
+  <span class="checkmark"></span>
+</label>
+<label class="radio-control radio-control--peach-dark">Peach Dark
+  <input type="radio" name="radio">
+  <span class="checkmark"></span>
+</label>
+<label class="radio-control radio-control--slate">Slate
+  <input type="radio" name="radio">
+  <span class="checkmark"></span>
+</label>
+<label class="radio-control radio-control--slate-lite">Slate Lite
+  <input type="radio" name="radio">
+  <span class="checkmark"></span>
+</label>
+```
+### Disabled Radio Buttons
+```radios-disabled.html
+<label class="radio-control">Default
+  <input disabled type="radio" checked="checked" name="radio">
+  <span class="checkmark"></span>
+</label>
+<label class="radio-control radio-control--lime">Lime
+  <input disabled type="radio" name="radio">
+  <span class="checkmark"></span>
+</label>
+```
+
+```radio.css hidden
+body {
+  margin: 32px;
+}
+```
+*/
+
+.radio-control {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+    }
+
+    .checkmark {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 25px;
+        width: 25px;
+        background-color: #eee;
+        border-radius: 50%;
+    }
+
+    &:hover input:not(:disabled) ~ .checkmark {
+        background-color: #ccc;
+    }
+
+    & input:not(:disabled):checked ~ .checkmark {
+        background-color: #333333;
+    }
+
+    & input:disabled:checked ~ .checkmark {
+        background-color: #333333;
+        opacity: .3;
+    }
+
+    .checkmark:after {
+        content: "";
+        position: absolute;
+        display: none;
+    }
+
+    & input:checked ~ .checkmark:after {
+        display: block;
+    }
+
+    & .checkmark:after {
+        top: 2px;
+        left: 2px;
+        width: 17px;
+        height: 17px;
+        border-radius: 50%;
+        border: 2px solid #fff;
+        background: #333333;
+   }
+
+   &--peach .checkmark:after {
+        background-color: $peach-primary;
+    }
+
+    &--peach-dark .checkmark:after {
+        background-color: $peach-dark;
+    }
+
+    &--lime .checkmark:after {
+        background-color: $lime-primary;
+    }
+
+    &--lime-dark .checkmark:after{
+        background-color: $lime-dark;
+    }
+
+    &--slate .checkmark:after {
+        background-color: $slate-primary;
+    }
+
+    &--slate-lite .checkmark:after {
+        background-color: $slate-lite;
+    }
+
+    & input:disabled:not(:checked) ~ .checkmark:after {
+        display: block;
+        background-color: #fff;
+        border-color: #fff;
+        opacity: .6;
+    }
+
+    & input:disabled:checked ~ .checkmark:after {
+        display: block;
+        background-color: #4f4f4f;
+        border-color: #4f4f4f;
+        opacity: .6;
+    }
+}

@@ -1,23 +1,55 @@
 @import url(https://fonts.googleapis.com/css?family=Varela+Round);/** postcss-bem-linter: define main-component; weak */
+body {
+  margin: 0;
+  font-family: 'Varela Round', sans-serif;
+  font-size: 14px; }
+
 /*
 ---
-name: Button
+name: Buttons
 category: Components
 ---
 
-Buttons can be used with `<a>`, `<button>`, and `<input>` elements.
+Use custom button styles for actions in forms, dialogs, and more with support for multiple colours and states.
 
-Types of buttons:
-- Default: Standard button
+Along with the default style, buttons come in 3 colors with a variation of that color:
+- Default
+- Lime, Lime Dark
+- Peach, Peach Dark
+- Slate, Slate Lite
 
+### Button Examples
 ```buttons.html
 <button class="button">Default</button>
 <button class="button button--lime">Lime</button>
+<button class="button button--lime-dark">Lime Dark</button>
 <button class="button button--peach">Peach</button>
+<button class="button button--peach-dark">Peach Dark</button>
 <button class="button button--slate">Slate</button>
+<button class="button button--slate-lite">Slate Lite</button>
+```
+### Disabled Buttons
+```buttons-disabled.html
+<button disabled class="button">Default</button>
+<button disabled class="button button--lime">Lime</button>
+<button disabled class="button button--lime-dark">Lime Dark</button>
+<button disabled class="button button--peach">Peach</button>
+<button disabled class="button button--peach-dark">Peach Dark</button>
+<button disabled class="button button--slate">Slate</button>
+<button disabled class="button button--slate-lite">Slate Lite</button>
 ```
 
 ```buttons.css hidden
+body {
+  margin: 32px;
+}
+
+.button {
+  margin-right: 24px;
+}
+```
+
+```buttons-disabled.css hidden
 body {
   margin: 32px;
 }
@@ -34,7 +66,6 @@ body {
   font-weight: normal;
   -webkit-transition: .3s ease all;
   transition: .3s ease all;
-  background-origin: padding-box;
   text-decoration: none;
   border: none;
   text-align: center;
@@ -42,24 +73,290 @@ body {
   background-color: #fff; }
   .button:not(:disabled) {
     -webkit-box-shadow: 2px 2px 2px #dcdcdc;
-            box-shadow: 2px 2px 2px #dcdcdc; }
+            box-shadow: 2px 2px 2px #dcdcdc;
+    cursor: pointer; }
     .button:not(:disabled):hover {
       -webkit-box-shadow: 4px 4px 4px #dcdcdc;
               box-shadow: 4px 4px 4px #dcdcdc; }
+  .button:disabled, .button--disabled {
+    cursor: not-allowed; }
   .button:visited {
     color: initial;
     text-decoration: none; }
   .button--peach {
     background-color: #ffe9af; }
+  .button--peach-dark {
+    background-color: #ffd366; }
   .button--lime {
     background-color: #9cff93; }
+  .button--lime-dark {
+    background-color: #7ac471; }
   .button--slate {
     background-color: #262630;
     color: #fff; }
+  .button--slate-lite {
+    background-color: #cdcdd8; }
 
+/*
+---
+name: Text Inputs
+category: Components
+---
+
+Examples and usage guidelines for basic text inputs. 
+
+Along with the default style, inputs come in 3 colors with a variation of that color:
+- Default
+- Lime, Lime Dark
+- Peach, Peach Dark
+- Slate, Slate Lite
+
+### Text Input Examples
+```inputs.html
+<input class="input" placeholder="Default" />
+<input class="input input--lime" placeholder="Lime" />
+<input class="input input--lime-dark" placeholder="Lime Dark" />
+<input class="input input--peach" placeholder="Peach" />
+<input class="input input--peach-dark" placeholder="Peach Dark" />
+<input class="input input--slate" placeholder="Slate" />
+<input class="input input--slate-lite" placeholder="Slate Lite" />
+```
+### Disabled Text Inputs
+```inputs-disabled.html
+<input disabled class="input" placeholder="Default" />
+<input disabled class="input input--lime" placeholder="Lime" />
+<input disabled class="input input--lime-dark" placeholder="Lime Dark" />
+<input disabled class="input input--peach" placeholder="Peach" />
+<input disabled class="input input--peach-dark" placeholder="Peach Dark" />
+<input disabled class="input input--slate" placeholder="Slate" />
+<input disabled class="input input--slate-lite" placeholder="Slate Lite" />
+```
+
+```inputs.css hidden
 body {
-  margin: 0;
-  font-family: 'Varela Round', sans-serif;
-  font-size: 14px; }
+  margin: 32px;
+}
+
+.input {
+  display: block;
+  margin-bottom: 24px;
+}
+```
+
+```inputs-disabled.css hidden
+body {
+  margin: 32px;
+}
+
+.input {
+  display: block;
+  margin-bottom: 24px;
+}
+```
+*/
+.input {
+  padding: 8px;
+  display: inline-block;
+  -webkit-transition: .3s ease all;
+  transition: .3s ease all;
+  font-style: italic;
+  border: 1px solid #333333;
+  vertical-align: middle;
+  background-color: #fff; }
+  .input:not(:disabled) {
+    -webkit-box-shadow: 2px 2px 2px #dcdcdc;
+            box-shadow: 2px 2px 2px #dcdcdc; }
+    .input:not(:disabled):hover {
+      -webkit-box-shadow: 4px 4px 4px #dcdcdc;
+              box-shadow: 4px 4px 4px #dcdcdc; }
+  .input:disabled, .input--disabled {
+    cursor: not-allowed;
+    opacity: .6; }
+  .input:visited {
+    color: initial;
+    text-decoration: none; }
+  .input--peach {
+    border-color: #ffe9af; }
+  .input--peach-dark {
+    border-color: #ffd366; }
+  .input--lime {
+    border-color: #9cff93; }
+  .input--lime-dark {
+    border-color: #7ac471; }
+  .input--slate {
+    border-color: #262630; }
+  .input--slate-lite {
+    border-color: #cdcdd8; }
+
+/*
+---
+name: Cards
+category: Components
+---
+
+The card provides a flexible and extensible content container.
+
+### Card Example
+```card.html
+<div class="card">
+    <span class="card__title">Card Title</span>
+    <p class="card__content">
+        Some quick example text to build on the card title and make up the bulk of the card's content.
+    </p>
+    <button class="button button--lime card__action">Action</button>
+</div>
+```
+
+```card.css hidden
+body {
+  margin: 32px;
+}
+```
+*/
+.card {
+  padding: 16px;
+  border: 1px solid #333333;
+  display: inline-block; }
+  .card__title {
+    font-size: 20px;
+    display: block;
+    margin-bottom: 16px; }
+  .card__content {
+    display: block;
+    margin-bottom: 16px;
+    font-size: 14px; }
+  .card__action {
+    display: block;
+    width: 100%; }
+
+/*
+---
+name: Radio Buttons
+category: Components
+---
+
+Examples and usage guidelines for radio buttons. 
+
+Along with the default style, radio buttons come in 3 colors with a variation of that color:
+- Default
+- Lime, Lime Dark
+- Peach, Peach Dark
+- Slate, Slate Lite
+
+### Radio Button Examples
+```radio.html
+<label class="radio-control">Default
+  <input type="radio" name="radio">
+  <span class="checkmark"></span>
+</label>
+<label class="radio-control radio-control--lime">Lime
+  <input type="radio" name="radio">
+  <span class="checkmark"></span>
+</label>
+<label class="radio-control radio-control--lime-dark">Lime Dark
+  <input type="radio" name="radio">
+  <span class="checkmark"></span>
+</label>
+<label class="radio-control radio-control--peach">Peach
+  <input type="radio" checked="checked" name="radio">
+  <span class="checkmark"></span>
+</label>
+<label class="radio-control radio-control--peach-dark">Peach Dark
+  <input type="radio" name="radio">
+  <span class="checkmark"></span>
+</label>
+<label class="radio-control radio-control--slate">Slate
+  <input type="radio" name="radio">
+  <span class="checkmark"></span>
+</label>
+<label class="radio-control radio-control--slate-lite">Slate Lite
+  <input type="radio" name="radio">
+  <span class="checkmark"></span>
+</label>
+```
+### Disabled Radio Buttons
+```radios-disabled.html
+<label class="radio-control">Default
+  <input disabled type="radio" checked="checked" name="radio">
+  <span class="checkmark"></span>
+</label>
+<label class="radio-control radio-control--lime">Lime
+  <input disabled type="radio" name="radio">
+  <span class="checkmark"></span>
+</label>
+```
+
+```radio.css hidden
+body {
+  margin: 32px;
+}
+```
+*/
+.radio-control {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+  .radio-control input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer; }
+  .radio-control .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 50%; }
+  .radio-control:hover input:not(:disabled) ~ .checkmark {
+    background-color: #ccc; }
+  .radio-control input:not(:disabled):checked ~ .checkmark {
+    background-color: #333333; }
+  .radio-control input:disabled:checked ~ .checkmark {
+    background-color: #333333;
+    opacity: 6; }
+  .radio-control .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none; }
+  .radio-control input:checked ~ .checkmark:after {
+    display: block; }
+  .radio-control .checkmark:after {
+    top: 2px;
+    left: 2px;
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    background: #333333; }
+  .radio-control--peach .checkmark:after {
+    background-color: #ffe9af; }
+  .radio-control--peach-dark .checkmark:after {
+    background-color: #ffd366; }
+  .radio-control--lime .checkmark:after {
+    background-color: #9cff93; }
+  .radio-control--lime-dark .checkmark:after {
+    background-color: #7ac471; }
+  .radio-control--slate .checkmark:after {
+    background-color: #262630; }
+  .radio-control--slate-lite .checkmark:after {
+    background-color: #cdcdd8; }
+  .radio-control input:disabled:not(:checked) ~ .checkmark:after {
+    display: block;
+    background-color: #fff;
+    border-color: #fff;
+    opacity: .6; }
+  .radio-control input:disabled:checked ~ .checkmark:after {
+    display: block;
+    background-color: #4f4f4f;
+    border-color: #4f4f4f;
+    opacity: .6; }
 
 /*# sourceMappingURL=app.css.map*/

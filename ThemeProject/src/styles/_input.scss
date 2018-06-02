@@ -1,0 +1,110 @@
+/*
+---
+name: Text Inputs
+category: Components
+---
+
+Examples and usage guidelines for basic text inputs. 
+
+Along with the default style, inputs come in 3 colors with a variation of that color:
+- Default
+- Lime, Lime Dark
+- Peach, Peach Dark
+- Slate, Slate Lite
+
+### Text Input Examples
+```inputs.html
+<input class="input" placeholder="Default" />
+<input class="input input--lime" placeholder="Lime" />
+<input class="input input--lime-dark" placeholder="Lime Dark" />
+<input class="input input--peach" placeholder="Peach" />
+<input class="input input--peach-dark" placeholder="Peach Dark" />
+<input class="input input--slate" placeholder="Slate" />
+<input class="input input--slate-lite" placeholder="Slate Lite" />
+```
+### Disabled Text Inputs
+```inputs-disabled.html
+<input disabled class="input" placeholder="Default" />
+<input disabled class="input input--lime" placeholder="Lime" />
+<input disabled class="input input--lime-dark" placeholder="Lime Dark" />
+<input disabled class="input input--peach" placeholder="Peach" />
+<input disabled class="input input--peach-dark" placeholder="Peach Dark" />
+<input disabled class="input input--slate" placeholder="Slate" />
+<input disabled class="input input--slate-lite" placeholder="Slate Lite" />
+```
+
+```inputs.css hidden
+body {
+  margin: 32px;
+}
+
+.input {
+  display: block;
+  margin-bottom: 24px;
+}
+```
+
+```inputs-disabled.css hidden
+body {
+  margin: 32px;
+}
+
+.input {
+  display: block;
+  margin-bottom: 24px;
+}
+```
+*/
+
+.input {
+    padding: 8px;
+    display: inline-block;
+    transition: .3s ease all;
+    font-style: italic;
+    border: 1px solid #333333;
+    vertical-align: middle;
+    background-color: #fff;  
+    
+    &:not(:disabled) {
+      box-shadow: 2px 2px 2px #dcdcdc;
+  
+      &:hover {
+        box-shadow: 4px 4px 4px #dcdcdc;
+      }
+    }
+  
+    &:disabled, &--disabled {
+      cursor: not-allowed;
+      opacity: .6;
+    }
+  
+    &:visited {
+      color: initial;
+      text-decoration: none;
+    }
+  
+    &--peach {
+      border-color: $peach-primary;
+    }
+  
+    &--peach-dark {
+        border-color: $peach-dark;
+    }
+  
+    &--lime {
+        border-color: $lime-primary;
+    }
+  
+    &--lime-dark {
+        border-color: $lime-dark;
+    }
+  
+    &--slate {
+        border-color: $slate-primary;
+    }
+  
+    &--slate-lite {
+        border-color: $slate-lite;
+    }
+  }
+  

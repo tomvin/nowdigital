@@ -1,0 +1,48 @@
+/*
+---
+name: Cards
+category: Components
+---
+
+The card provides a flexible and extensible content container.
+
+### Card Example
+```card.html
+<div class="card">
+    <span class="card__title">Card Title</span>
+    <p class="card__content">
+        Some quick example text to build on the card title and make up the bulk of the card's content.
+    </p>
+    <button class="button button--lime card__action">Action</button>
+</div>
+```
+
+```card.css hidden
+body {
+  margin: 32px;
+}
+```
+*/
+
+.card {
+    padding: 16px;
+    border: 1px solid #333333;
+    display: inline-block;
+
+    &__title {
+        font-size: 20px;
+        display: block;
+        margin-bottom: 16px;
+    }
+
+    &__content {
+        display: block;
+        margin-bottom: 16px;
+        font-size: 14px;
+    }
+
+    &__action {
+        display: block;
+        width: 100%;
+    }
+}

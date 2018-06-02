@@ -4,9 +4,6 @@
 @import './styles/themes';
 @import './styles/base';
 @import './styles/button';
-
-body {
-  margin: 0;
-  font-family: 'Varela Round', sans-serif;
-  font-size: 14px;
-}
+@import './styles/input';
+@import './styles/card';
+@import './styles/radio-button';
