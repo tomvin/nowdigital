@@ -1,0 +1,12 @@
+/** postcss-bem-linter: define main-component; weak */
+
+@import url('https://fonts.googleapis.com/css?family=Varela+Round');
+@import './styles/themes';
+@import './styles/base';
+@import './styles/button';
+
+body {
+  margin: 0;
+  font-family: 'Varela Round', sans-serif;
+  font-size: 14px;
+}

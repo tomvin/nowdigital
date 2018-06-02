@@ -1,0 +1,20 @@
+name: Now Digital Style Guide
+logo: https://www.nowdigital.com.au/themes/now2015/i/logo-now.png
+
+excludeDir:
+  - src
+
+assets:
+  - dist/css
+  - dist/js
+
+sidebar:
+  background: "#011e26"
+  textColor: "#fff"
+
+headHtml: |
+  <link rel="stylesheet" href="dist/css/app.css">
+
+bodyHtml: |
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="dist/js/app.js"></script>

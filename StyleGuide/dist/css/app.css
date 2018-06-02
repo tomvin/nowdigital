@@ -1,0 +1,65 @@
+@import url(https://fonts.googleapis.com/css?family=Varela+Round);/** postcss-bem-linter: define main-component; weak */
+/*
+---
+name: Button
+category: Components
+---
+
+Buttons can be used with `<a>`, `<button>`, and `<input>` elements.
+
+Types of buttons:
+- Default: Standard button
+
+```buttons.html
+<button class="button">Default</button>
+<button class="button button--lime">Lime</button>
+<button class="button button--peach">Peach</button>
+<button class="button button--slate">Slate</button>
+```
+
+```buttons.css hidden
+body {
+  margin: 32px;
+}
+
+.button {
+  margin-right: 24px;
+}
+```
+*/
+.button {
+  text-decoration: none;
+  padding: 8px 32px;
+  display: inline-block;
+  font-weight: normal;
+  -webkit-transition: .3s ease all;
+  transition: .3s ease all;
+  background-origin: padding-box;
+  text-decoration: none;
+  border: none;
+  text-align: center;
+  vertical-align: middle;
+  background-color: #fff; }
+  .button:not(:disabled) {
+    -webkit-box-shadow: 2px 2px 2px #dcdcdc;
+            box-shadow: 2px 2px 2px #dcdcdc; }
+    .button:not(:disabled):hover {
+      -webkit-box-shadow: 4px 4px 4px #dcdcdc;
+              box-shadow: 4px 4px 4px #dcdcdc; }
+  .button:visited {
+    color: initial;
+    text-decoration: none; }
+  .button--peach {
+    background-color: #ffe9af; }
+  .button--lime {
+    background-color: #9cff93; }
+  .button--slate {
+    background-color: #262630;
+    color: #fff; }
+
+body {
+  margin: 0;
+  font-family: 'Varela Round', sans-serif;
+  font-size: 14px; }
+
+/*# sourceMappingURL=app.css.map*/
