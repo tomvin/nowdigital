@@ -79,7 +79,8 @@ body {
       -webkit-box-shadow: 4px 4px 4px #dcdcdc;
               box-shadow: 4px 4px 4px #dcdcdc; }
   .button:disabled, .button--disabled {
-    cursor: not-allowed; }
+    cursor: not-allowed;
+    opacity: .8; }
   .button:visited {
     color: initial;
     text-decoration: none; }
